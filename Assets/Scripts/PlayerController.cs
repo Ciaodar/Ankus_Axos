@@ -28,6 +28,18 @@ public class PlayerController : MonoBehaviour
     private float coyoteTimeCounter;
     private float jumpBufferCounter;
 
+    public AudioSource footstepAudio;
+
+    public void PlayFootstepSound()
+    {
+        if (footstepAudio != null && isGrounded) 
+        {
+            footstepAudio.Play();
+        }
+        
+       // if(footstepAudio !=null && !isGrounded)
+            
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -73,6 +85,8 @@ public class PlayerController : MonoBehaviour
         // 🟡 Animator parametrelerini güncelle
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
         animator.SetBool("isCarrying", isCarryingAxolotl);
+        
+        
     }
 
     void FixedUpdate()
