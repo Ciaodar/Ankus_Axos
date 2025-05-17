@@ -1,29 +1,54 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class PlaceObjectManager : MonoBehaviour
 {
-    // Şu an sahnede takip eden obje
+    [Header("Buton Ayarları")]
+    public Button myButton; // Inspector'dan ata (her buton için farklı)
+    public int maxCount = 1; // Inspector'dan ata (her buton için farklı)
+    private int currentCount;
+
+    [Header("Prefab Ayarları")]
+    public GameObject prefabToPlace; // Inspector'dan ata (her buton için farklı)
+
     private GameObject currentGhostObject;
 
-    // Yerleştirilecek prefab
-    private GameObject selectedPrefab;
+    void Start()
+    {
+        currentCount = maxCount;
+        if (myButton != null)
+            myButton.interactable = currentCount > 0;
+    }
 
-    public int placeCount = 1; // Kaç adet obje yerleştirileceğini belirler
+    public void OnButtonClick()
+    {
+        if (currentCount <= 0) return;
 
-    // Update fonksiyonu her frame çağrılır
+        // Hayalet obje oluştur
+        if (currentGhostObject != null)
+            Destroy(currentGhostObject);
+
+        if (prefabToPlace != null)
+        {
+            currentGhostObject = Instantiate(prefabToPlace);
+            SetGhostMode(currentGhostObject, true);
+        }
+
+        // Counter azalt ve butonu kontrol et
+        currentCount--;
+        if (myButton != null && currentCount <= 0)
+            myButton.interactable = false;
+    }
+
     void Update()
     {
-        // Eğer takip eden bir obje varsa mouse pozisyonunu takip ettir
-        if (currentGhostObject != null && placeCount > 0)
+        if (currentGhostObject != null)
         {
-            // Mouse pozisyonunu ekran koordinatından dünya koordinatına çevir
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mousePosition.z = 0f; // Z eksenini sıfırla (2D oyun olduğu için)
-
+            mousePosition.z = 0f;
             currentGhostObject.transform.position = mousePosition;
 
-            // Sol tıklama yapıldıysa objeyi sabitle
             if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
             {
                 PlaceObject();
@@ -31,61 +56,22 @@ public class PlaceObjectManager : MonoBehaviour
         }
     }
 
-    // UI butonu üzerinden çağrılır, hangi prefab seçilecekse ismi gönderilir
-    public void SelectObject(GameObject prefabName)
-    {
-        // Eğer yerleştirme hakkı yoksa hiçbir şey yapma
-        if (placeCount <= 0)
-            return;
-
-        // Eğer sahnede bir önceki hayalet obje varsa sil
-        if (currentGhostObject != null)
-        {
-            Destroy(currentGhostObject);
-        }
-
-        // Resources klasöründen prefabı yükle
-        selectedPrefab = prefabName;
-
-        if (selectedPrefab != null)
-        {
-            // Yeni bir kopya oluştur
-            currentGhostObject = Instantiate(selectedPrefab);
-            SetGhostMode(currentGhostObject, true); // Şeffaf ve collider kapalı
-        }
-        else
-        {
-            Debug.LogError("Prefab bulunamadı: " + prefabName);
-        }
-    }
-
-    // Objeyi yerleştir, opak yap, collider aç
     private void PlaceObject()
     {
-        SetGhostMode(currentGhostObject, false); // Normal moda geç
-
-        // Süre atama panelini aç ve objeyi gönder
+        SetGhostMode(currentGhostObject, false);
         ShowAssignTimePanel(currentGhostObject);
-
-        currentGhostObject = null; // Takip durur
-        placeCount--;
+        currentGhostObject = null;
     }
 
-    // Süre atama panelini açan fonksiyon (UI panelini siz oluşturmalısınız)
     private void ShowAssignTimePanel(GameObject obj)
     {
-        // Prefabın içindeki AssignTimePanel scriptini bul ve aç
         AssignTimePanel panel = obj.GetComponentInChildren<AssignTimePanel>(true);
         if (panel != null)
-        {
             panel.Open(obj);
-        }
     }
 
-    // Objeyi ghost (yarı saydam, collider kapalı) veya normal moda ayarlar
     private void SetGhostMode(GameObject obj, bool isGhost)
     {
-        // Opaklık ayarla (SpriteRenderer üzerinden)
         SpriteRenderer sr = obj.GetComponent<SpriteRenderer>();
         if (sr != null)
         {
@@ -94,12 +80,9 @@ public class PlaceObjectManager : MonoBehaviour
             sr.color = color;
         }
 
-        // Collider aktif/pasif ayarla
         Collider2D col = obj.GetComponent<Collider2D>();
         if (col != null)
-        {
             col.enabled = !isGhost;
-        }
     }
 }
 

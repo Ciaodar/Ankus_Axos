@@ -19,11 +19,15 @@ public class CameraFollow : MonoBehaviour
 
     void LateUpdate()
     {
-        // Sadece StartGame çağrıldıktan sonra takip et
         if (canFollow && target != null)
         {
             Vector3 desiredPosition = target.position + offset;
             Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+
+            float ppu = 100f; // Sprite ayarındaki Pixels Per Unit ile aynı olmalı!
+            smoothedPosition.x = Mathf.Round(smoothedPosition.x * ppu) / ppu;
+            smoothedPosition.y = Mathf.Round(smoothedPosition.y * ppu) / ppu;
+
             transform.position = new Vector3(smoothedPosition.x, smoothedPosition.y, transform.position.z);
         }
     }
