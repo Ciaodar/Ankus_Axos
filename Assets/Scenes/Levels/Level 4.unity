@@ -467,8 +467,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2784104205733645157, guid: ee39aef5455d5b4418c55be5c7b575ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 776016655}
   m_SourcePrefab: {fileID: 100100000, guid: ee39aef5455d5b4418c55be5c7b575ce, type: 3}
+--- !u!1 &776016654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2784104205733645157, guid: ee39aef5455d5b4418c55be5c7b575ce, type: 3}
+  m_PrefabInstance: {fileID: 776016653}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &776016655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776016654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b463c26f0212a488a0faa0d7f3d088, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCarryingAxolotl: 0
 --- !u!1 &1145056231
 GameObject:
   m_ObjectHideFlags: 0
@@ -31650,6 +31671,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 34.7, y: 0, z: 0}
+--- !u!1001 &1774248636
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 583092490543699266, guid: cf8db652939077447b449ad453ab8e48, type: 3}
+      propertyPath: totalAxolotlsInLevel
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3412329522339981770, guid: cf8db652939077447b449ad453ab8e48, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.288071
+      objectReference: {fileID: 0}
+    - target: {fileID: 3412329522339981770, guid: cf8db652939077447b449ad453ab8e48, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 23.472431
+      objectReference: {fileID: 0}
+    - target: {fileID: 3412329522339981770, guid: cf8db652939077447b449ad453ab8e48, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.2082423
+      objectReference: {fileID: 0}
+    - target: {fileID: 3412329522339981770, guid: cf8db652939077447b449ad453ab8e48, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3412329522339981770, guid: cf8db652939077447b449ad453ab8e48, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3412329522339981770, guid: cf8db652939077447b449ad453ab8e48, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3412329522339981770, guid: cf8db652939077447b449ad453ab8e48, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3412329522339981770, guid: cf8db652939077447b449ad453ab8e48, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3412329522339981770, guid: cf8db652939077447b449ad453ab8e48, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3412329522339981770, guid: cf8db652939077447b449ad453ab8e48, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3807508359149649983, guid: cf8db652939077447b449ad453ab8e48, type: 3}
+      propertyPath: m_Name
+      value: AxolotlManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cf8db652939077447b449ad453ab8e48, type: 3}
 --- !u!1 &1855526224
 GameObject:
   m_ObjectHideFlags: 0
@@ -36460,3 +36542,4 @@ SceneRoots:
   - {fileID: 1445911626}
   - {fileID: 110453071}
   - {fileID: 7750296227456715861}
+  - {fileID: 1774248636}

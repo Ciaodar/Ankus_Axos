@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 9020554312696084514}
   - component: {fileID: 7321565057364078315}
   - component: {fileID: 4070405527400132239}
-  - component: {fileID: 4711140102366936676}
   - component: {fileID: 4578701061129008596}
+  - component: {fileID: 5996626755914097347}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -197,18 +197,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4711140102366936676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2784104205733645157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54668d70091713f46aa4d8b8c8ab5372, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &4578701061129008596
 AudioSource:
   m_ObjectHideFlags: 0
@@ -305,6 +293,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5996626755914097347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2784104205733645157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b463c26f0212a488a0faa0d7f3d088, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCarryingAxolotl: 0
 --- !u!1 &3056796499210390926
 GameObject:
   m_ObjectHideFlags: 0
