@@ -56,9 +56,9 @@ TagManager:
   - name: Forward
     uniqueID: 1328627379
     locked: 0
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: UI
     uniqueID: 1628958031
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
