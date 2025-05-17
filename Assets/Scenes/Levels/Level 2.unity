@@ -333,6 +333,7 @@ GameObject:
   - component: {fileID: 769773288}
   - component: {fileID: 769773290}
   - component: {fileID: 769773289}
+  - component: {fileID: 769773291}
   m_Layer: 4
   m_Name: Forward
   m_TagString: Untagged
@@ -708,6 +709,51 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!61 &769773291
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769773287}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 19.957335, y: -10.45831}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.7996025, y: 4.085371}
+  m_EdgeRadius: 0
 --- !u!4 &1030085205 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3491276165296602725, guid: 65b75ed0a6281b64db84b3355b6a7ac0, type: 3}

@@ -200,9 +200,10 @@ MonoBehaviour:
   groundCheckRadius: 0.1
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   coyoteTime: 0.1
   jumpBufferTime: 0.1
+  animator: {fileID: 5862235302062758821}
 --- !u!95 &5862235302062758821
 Animator:
   serializedVersion: 5
