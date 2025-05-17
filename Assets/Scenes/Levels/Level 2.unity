@@ -661,6 +661,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 426351015037033431, guid: 03b8051177a12c44fb416af8476cdb52, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -327.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 426351015037033431, guid: 03b8051177a12c44fb416af8476cdb52, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -119.89
+      objectReference: {fileID: 0}
     - target: {fileID: 2330734489631750526, guid: 03b8051177a12c44fb416af8476cdb52, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -5656,51 +5664,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.7996025, y: 4.085371}
   m_EdgeRadius: 0
---- !u!1 &778255131
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 778255133}
-  - component: {fileID: 778255132}
-  m_Layer: 0
-  m_Name: AxolotlManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &778255132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778255131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf9ba3b9000c7a140b5abbf3e6b3e976, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalAxolotls: 0
---- !u!4 &778255133
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778255131}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.288071, y: 23.472431, z: -0.2082423}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1145056231
 GameObject:
   m_ObjectHideFlags: 0
@@ -72368,7 +72331,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 672203753}
   - {fileID: 1756438811}
-  - {fileID: 778255133}
   - {fileID: 242108863}
   - {fileID: 1474492163}
   - {fileID: 637041517}
