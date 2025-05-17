@@ -403,13 +403,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: BG - Trees
       objectReference: {fileID: 0}
+    - target: {fileID: 6018453959889831125, guid: 1b97e92bb88f87841b59d5d37aa38a7f, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751964029428673152, guid: 1b97e92bb88f87841b59d5d37aa38a7f, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9121470706202740987, guid: 1b97e92bb88f87841b59d5d37aa38a7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.1
       objectReference: {fileID: 0}
     - target: {fileID: 9121470706202740987, guid: 1b97e92bb88f87841b59d5d37aa38a7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8
+      value: 1.38
       objectReference: {fileID: 0}
     - target: {fileID: 9121470706202740987, guid: 1b97e92bb88f87841b59d5d37aa38a7f, type: 3}
       propertyPath: m_LocalPosition.z
