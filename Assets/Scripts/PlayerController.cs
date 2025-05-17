@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
@@ -71,12 +70,9 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
-        // Animator parametrelerini güncelle
+        // 🟡 Animator parametrelerini güncelle
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
         animator.SetBool("isCarrying", isCarryingAxolotl);
-
-        // Axolotl durumu kontrolü
-        CheckAxolotlRemaining();
     }
 
     void FixedUpdate()
@@ -103,16 +99,6 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Lake") && isCarryingAxolotl)
         {
             isCarryingAxolotl = false;
-        }
-    }
-
-    void CheckAxolotlRemaining()
-    {
-        GameObject[] remainingAxolotls = GameObject.FindGameObjectsWithTag("Axolotl");
-
-        if (remainingAxolotls.Length == 0 && !isCarryingAxolotl)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
