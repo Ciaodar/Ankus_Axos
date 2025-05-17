@@ -23,9 +23,11 @@ public class AxolotlManager : MonoBehaviour
     public void AxolotlSaved()
     {
         savedAxolotls++;
+        Debug.Log("Axolotl kurtar?ld?! Toplam: " + savedAxolotls + "/" + totalAxolotls);
 
         if (savedAxolotls >= totalAxolotls)
         {
+            Debug.Log("Tüm Axolotllar kurtar?ld?. Level de?i?iyor...");
             LoadNextLevel();
         }
     }
