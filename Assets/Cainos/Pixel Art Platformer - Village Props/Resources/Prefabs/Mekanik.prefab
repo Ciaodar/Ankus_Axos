@@ -1329,6 +1329,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 128504676675447900}
   - {fileID: 3701398386223271051}
   - {fileID: 9080681936269367342}
   - {fileID: 2497349849045839093}
@@ -1412,7 +1413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGameStarted: 0
-  playerController: {fileID: 0}
+  playerController: {fileID: 4813176060402990474}
   placeObjectButtons:
   - {fileID: 3818344500358478071}
   playButton: {fileID: 4529571779502095734}
@@ -1839,6 +1840,74 @@ MonoBehaviour:
   smoothSpeed: 0.05
   offset: {x: 0, y: 0, z: 0}
   targetOrthoSize: 5
+--- !u!1 &8989674776321958347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128504676675447900}
+  - component: {fileID: 7271992281863110876}
+  - component: {fileID: 7244836795625570799}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128504676675447900
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8989674776321958347}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -315.4, y: -138.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5166269980972676128}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7271992281863110876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8989674776321958347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!114 &7244836795625570799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8989674776321958347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
 --- !u!1 &8997687266702375050
 GameObject:
   m_ObjectHideFlags: 0
@@ -2286,7 +2355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6554367765742454102, guid: 65b75ed0a6281b64db84b3355b6a7ac0, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 6554367765742454102, guid: 65b75ed0a6281b64db84b3355b6a7ac0, type: 3}
       propertyPath: m_SortingLayerID
@@ -2297,6 +2366,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65b75ed0a6281b64db84b3355b6a7ac0, type: 3}
+--- !u!114 &4813176060402990474 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 917968035738098625, guid: 65b75ed0a6281b64db84b3355b6a7ac0, type: 3}
+  m_PrefabInstance: {fileID: 5653866020590249547}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deaf56acf718c4e4f92c7ff3534f9b7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &9080681936269367342 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3491276165296602725, guid: 65b75ed0a6281b64db84b3355b6a7ac0, type: 3}
@@ -2393,6 +2473,10 @@ PrefabInstance:
     - target: {fileID: 4832447099246270992, guid: 251590c26dd8dcd47beb67e6a2bba43a, type: 3}
       propertyPath: m_Name
       value: SpawnerButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832447099246270992, guid: 251590c26dd8dcd47beb67e6a2bba43a, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 4848886853346954534, guid: 251590c26dd8dcd47beb67e6a2bba43a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

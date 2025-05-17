@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5851833712289779377}
   - component: {fileID: 8619629852261183873}
   - component: {fileID: 4014268077152405890}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FlyingPlatform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
