@@ -6,18 +6,21 @@ public class AxolotlManager : MonoBehaviour
     public int totalAxolotlsInLevel;
     public int rescuedAxolotls = 0;
 
-    
-    private void Start()
+    private LevelManager levelManager;
+
+    void Start()
     {
-        // Otomatik say?m (iste?e ba?l?)
         totalAxolotlsInLevel = GameObject.FindGameObjectsWithTag("Axolotl").Length;
+        levelManager = FindObjectOfType<LevelManager>();
     }
+
     public void RescueAxolotl()
     {
         rescuedAxolotls++;
+
         if (AllRescued())
         {
-            LoadNextScene();
+            ShowResultPanel(); // Direkt sahne geçme, panel göster
         }
     }
 
@@ -25,14 +28,20 @@ public class AxolotlManager : MonoBehaviour
     {
         return rescuedAxolotls == totalAxolotlsInLevel;
     }
-    
-    
+
+    public void ShowResultPanel()
+    {
+        if (levelManager != null)
+        {
+            levelManager.ShowPanel();
+        }
+    }
+
     public void LoadNextScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = currentSceneIndex + 1;
 
-        // Build ayarlarında bu sahne var mı kontrolü
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(nextSceneIndex);
@@ -40,7 +49,7 @@ public class AxolotlManager : MonoBehaviour
         else
         {
             Debug.Log("Son sahneydi, ana menüye dönülüyor veya oyun bitiyor.");
-            SceneManager.LoadScene(0); // Alternatif olarak bir ana menü sahnesi
+            SceneManager.LoadScene(0); // Ana menü ya da oyun sonu sahnesi
         }
     }
 

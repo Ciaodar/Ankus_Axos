@@ -15,6 +15,7 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI countdownText; // Inspector'dan ata
 
     private Coroutine timerCoroutine;
+    public LevelManager levelManager;
 
     private void Awake()
     {
@@ -81,6 +82,7 @@ public class Timer : MonoBehaviour
         }
 
         // Süre bitti, sahneyi yeniden başlat
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+       // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+       levelManager.ShowPanel();
     }
 }
