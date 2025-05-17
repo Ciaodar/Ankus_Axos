@@ -22613,7 +22613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 936537516835435490, guid: 9deb40e5c97ec2840888c500bbded39c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.56
+      value: -3.9
       objectReference: {fileID: 0}
     - target: {fileID: 936537516835435490, guid: 9deb40e5c97ec2840888c500bbded39c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22647,6 +22647,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6973891554630549820, guid: 9deb40e5c97ec2840888c500bbded39c, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 5f2cda5639f01e147b6e5759a709cde4, type: 2}
     - target: {fileID: 8891960870525463506, guid: 9deb40e5c97ec2840888c500bbded39c, type: 3}
       propertyPath: m_Name
       value: Trambolin
