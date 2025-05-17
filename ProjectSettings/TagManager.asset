@@ -41,11 +41,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Background
     uniqueID: 2786475689
+    locked: 0
+  - name: backword
+    uniqueID: 3508172289
     locked: 0
   - name: Ground
     uniqueID: 58721833
@@ -55,4 +55,10 @@ TagManager:
     locked: 0
   - name: Forward
     uniqueID: 1328627379
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 1628958031
     locked: 0

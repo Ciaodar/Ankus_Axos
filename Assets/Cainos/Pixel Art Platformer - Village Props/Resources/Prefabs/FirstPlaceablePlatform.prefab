@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8050056821715409164}
   - component: {fileID: 2392911513375668836}
   - component: {fileID: 1024149321530256466}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Confirm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3029086754858376069}
   - component: {fileID: 123711261383501515}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 4750415394267025394}
   - component: {fileID: 3026350581381137159}
   - component: {fileID: 7936413826834867898}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 3037323362091539345}
   - component: {fileID: 3609736835712783637}
   - component: {fileID: 9122311560262570201}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 6201943930824087675}
   - component: {fileID: 7272796116040534906}
   - component: {fileID: 539459166935245013}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 4519425731755877760}
   - component: {fileID: 6394144217439978139}
   - component: {fileID: 4371171237021031076}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: InputField (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -700,7 +700,7 @@ GameObject:
   - component: {fileID: 6667069603932898599}
   - component: {fileID: 4475687254122627091}
   - component: {fileID: 5103116003045690807}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -776,9 +776,9 @@ GameObject:
   - component: {fileID: 2030523118286491300}
   - component: {fileID: 7231465035100904703}
   - component: {fileID: 6663052413781558682}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FirstPlaceablePlatform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -907,7 +907,7 @@ GameObject:
   - component: {fileID: 7716375854389031511}
   - component: {fileID: 9162034599876852677}
   - component: {fileID: 5378787434768914789}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -984,7 +984,7 @@ GameObject:
   - component: {fileID: 6037362381474079010}
   - component: {fileID: 6823403618680222698}
   - component: {fileID: 7635450124786935234}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1119,7 +1119,7 @@ GameObject:
   - component: {fileID: 5080177001518689971}
   - component: {fileID: 401822993911486287}
   - component: {fileID: 808585700684631883}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

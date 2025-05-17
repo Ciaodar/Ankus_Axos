@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
             float time = 0;
             if (float.TryParse(panel.inputField.text, out time) && time > 0)
             {
-                panel.OnConfirm();
+                //panel.OnConfirm();
                 panel.StartTimerPanel(time);
             }
             else
