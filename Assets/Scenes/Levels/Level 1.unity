@@ -197,6 +197,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85097931}
   m_CullTransparentMesh: 1
+--- !u!1 &146512658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 146512660}
+  - component: {fileID: 146512659}
+  m_Layer: 0
+  m_Name: AxolotlManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &146512659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146512658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9ba3b9000c7a140b5abbf3e6b3e976, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalAxolotls: 0
+--- !u!4 &146512660
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146512658}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.415434, y: 32.418427, z: -0.6344264}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &164218724
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,11 +608,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8189655327630540260, guid: 03b8051177a12c44fb416af8476cdb52, type: 3}
       propertyPath: maxTime
-      value: 8
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8189655327630540260, guid: 03b8051177a12c44fb416af8476cdb52, type: 3}
       propertyPath: totalTime
-      value: 8
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8691870272992174416, guid: 03b8051177a12c44fb416af8476cdb52, type: 3}
       propertyPath: m_AnchorMax.x
@@ -18116,3 +18161,4 @@ SceneRoots:
   - {fileID: 1973633679}
   - {fileID: 1791373399}
   - {fileID: 562658170}
+  - {fileID: 146512660}
