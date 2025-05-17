@@ -16,6 +16,10 @@ public class PlayerController : MonoBehaviour
     public float coyoteTime = 0.1f;
     public float jumpBufferTime = 0.1f;
 
+    [Header("Axolotl Settings")]
+    public Animator animator; // Animator bileşeni Inspector üzerinden atanacak
+    private bool isCarryingAxolotl = false;
+
     private Rigidbody2D rb;
     private float moveInput;
     private bool facingRight = true;
@@ -65,6 +69,10 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
+
+        // 🟡 Animator parametrelerini güncelle
+        animator.SetFloat("Speed", Mathf.Abs(moveInput));
+        animator.SetBool("isCarrying", isCarryingAxolotl);
     }
 
     void FixedUpdate()
@@ -78,5 +86,19 @@ public class PlayerController : MonoBehaviour
         Vector3 scaler = transform.localScale;
         scaler.x *= -1;
         transform.localScale = scaler;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Axolotl") && !isCarryingAxolotl)
+        {
+            isCarryingAxolotl = true;
+            Destroy(other.gameObject); // Akselotu sahneden kaldır
+        }
+
+        if (other.CompareTag("Lake") && isCarryingAxolotl)
+        {
+            isCarryingAxolotl = false;
+        }
     }
 }
