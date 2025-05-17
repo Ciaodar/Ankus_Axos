@@ -452,9 +452,9 @@ GameObject:
   - component: {fileID: 5420627932717288023}
   - component: {fileID: 7714522677761791490}
   - component: {fileID: 5216751194816009890}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TX Village Props_1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -583,7 +583,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 4294967295
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0

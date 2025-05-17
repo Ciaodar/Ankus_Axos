@@ -83,6 +83,10 @@ public class GameManager : MonoBehaviour
             cameraFollow.ResetCameraSize();
             cameraFollow.ActivateFollowAndResize();
         }
+
+        CameraControlScrool scrollScript = Camera.main.GetComponent<CameraControlScrool>();
+        if (scrollScript != null)
+            scrollScript.enabled = false;
     }
 
     public void ConfirmUnconfirmedPanels()
