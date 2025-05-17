@@ -34,6 +34,10 @@ public class PlaceObjectManager : MonoBehaviour
     // UI butonu üzerinden çağrılır, hangi prefab seçilecekse ismi gönderilir
     public void SelectObject(GameObject prefabName)
     {
+        // Eğer yerleştirme hakkı yoksa hiçbir şey yapma
+        if (placeCount <= 0)
+            return;
+
         // Eğer sahnede bir önceki hayalet obje varsa sil
         if (currentGhostObject != null)
         {
@@ -41,14 +45,13 @@ public class PlaceObjectManager : MonoBehaviour
         }
 
         // Resources klasöründen prefabı yükle
-        selectedPrefab = prefabName;// Resources.Load<GameObject>("Prefabs/" + prefabName);
+        selectedPrefab = prefabName;
 
         if (selectedPrefab != null)
         {
             // Yeni bir kopya oluştur
             currentGhostObject = Instantiate(selectedPrefab);
             SetGhostMode(currentGhostObject, true); // Şeffaf ve collider kapalı
-            // placeCount = 1; // BUNU SİLİN veya YORUMA ALIN
         }
         else
         {
