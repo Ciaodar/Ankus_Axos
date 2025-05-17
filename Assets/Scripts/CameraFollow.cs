@@ -2,16 +2,44 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform target;
-    public float smoothSpeed = 0.1f;
+    public Transform target; // Takip edilecek obje (Player)
+    public float smoothSpeed = 0.125f;
     public Vector3 offset;
+    public float targetOrthoSize = 5f; // Inspector'dan atanacak yeni boyut
+
+    private Camera cam;
+    private float initialOrthoSize;
+    private bool canFollow = false;
+
+    void Start()
+    {
+        cam = GetComponent<Camera>();
+        initialOrthoSize = cam.orthographicSize; // Başlangıç boyutunu kaydet
+    }
 
     void LateUpdate()
     {
-        if (target == null) return;
+        // Sadece StartGame çağrıldıktan sonra takip et
+        if (canFollow && target != null)
+        {
+            Vector3 desiredPosition = target.position + offset;
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+            transform.position = new Vector3(smoothedPosition.x, smoothedPosition.y, transform.position.z);
+        }
+    }
 
-        Vector3 desiredPosition = target.position + offset;
-        Vector3 smoothed = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
-        transform.position = new Vector3(smoothed.x, smoothed.y, transform.position.z); // z sabit kalmalı
+    // GameManager'dan çağrılacak
+    public void ActivateFollowAndResize()
+    {
+        canFollow = true;
+        if (cam != null)
+            cam.orthographicSize = targetOrthoSize; // Yeni boyuta geç
+    }
+
+    // StartGame çalışmadan önce kameranın boyutu değişmesin
+    public void ResetCameraSize()
+    {
+        if (cam != null)
+            cam.orthographicSize = initialOrthoSize;
     }
 }

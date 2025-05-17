@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public Button playButton;
     public GameObject confirmPanel; // Inspector'dan ata
     public GameObject objectListPanel; // Inspector'dan ata
+    public CameraFollow cameraFollow; // Inspector'dan ata
 
     private void Awake()
     {
@@ -76,6 +77,12 @@ public class GameManager : MonoBehaviour
 
         if (Timer.Instance != null)
             Timer.Instance.StartTotalTimer();
+
+        if (cameraFollow != null)
+        {
+            cameraFollow.ResetCameraSize();
+            cameraFollow.ActivateFollowAndResize();
+        }
     }
 
     public void ConfirmUnconfirmedPanels()
