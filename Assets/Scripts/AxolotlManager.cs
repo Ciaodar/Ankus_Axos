@@ -3,48 +3,49 @@ using UnityEngine.SceneManagement;
 
 public class AxolotlManager : MonoBehaviour
 {
-    public int totalAxolotls = 0; // Bu leveldeki toplam axolotl say?s?
-    private int savedAxolotls = 0;
+    public int totalAxolotlsInLevel;
+    public int rescuedAxolotls = 0;
 
-    public static AxolotlManager Instance;
-
-    private void Awake()
-    {
-        if (Instance == null)
-            Instance = this;
-    }
-
+    
     private void Start()
     {
         // Otomatik say?m (iste?e ba?l?)
-        totalAxolotls = GameObject.FindGameObjectsWithTag("Axolotl").Length;
+        totalAxolotlsInLevel = GameObject.FindGameObjectsWithTag("Axolotl").Length;
     }
-
-    public void AxolotlSaved()
+    public void RescueAxolotl()
     {
-        savedAxolotls++;
-        Debug.Log("Axolotl kurtar?ld?! Toplam: " + savedAxolotls + "/" + totalAxolotls);
-
-        if (savedAxolotls >= totalAxolotls)
+        rescuedAxolotls++;
+        if (AllRescued())
         {
-            Debug.Log("Tüm Axolotllar kurtar?ld?. Level de?i?iyor...");
-            LoadNextLevel();
+            LoadNextScene();
         }
     }
 
-    private void LoadNextLevel()
+    public bool AllRescued()
     {
-        int currentIndex = SceneManager.GetActiveScene().buildIndex;
-        int nextIndex = currentIndex + 1;
+        return rescuedAxolotls == totalAxolotlsInLevel;
+    }
+    
+    
+    public void LoadNextScene()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex + 1;
 
-        if (nextIndex < SceneManager.sceneCountInBuildSettings)
+        // Build ayarlarÄ±nda bu sahne var mÄ± kontrolÃ¼
+        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
         {
-            SceneManager.LoadScene(nextIndex);
+            SceneManager.LoadScene(nextSceneIndex);
         }
         else
         {
-            Debug.Log("Son level tamamland?. Ana menüye dönülüyor.");
-            SceneManager.LoadScene(0); // Ana menü veya biti? sahnesi
+            Debug.Log("Son sahneydi, ana menÃ¼ye dÃ¶nÃ¼lÃ¼yor veya oyun bitiyor.");
+            SceneManager.LoadScene(0); // Alternatif olarak bir ana menÃ¼ sahnesi
         }
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
