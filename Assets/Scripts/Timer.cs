@@ -49,6 +49,20 @@ public class Timer : MonoBehaviour
         timerCoroutine = StartCoroutine(TotalTimerRoutine());
     }
 
+    public void StopTimerAndFreeze()
+    {
+        if (timerCoroutine != null)
+        {
+            StopCoroutine(timerCoroutine);
+            timerCoroutine = null;
+        }
+        // totalTime olduğu gibi kalır, UI güncellenmeye devam eder
+
+        // Son 5 saniye (LastSeconds) textini gizle
+        if (countdownText != null)
+            countdownText.gameObject.SetActive(false);
+    }
+
     private IEnumerator TotalTimerRoutine()
     {
         if (countdownText != null)
@@ -79,10 +93,12 @@ public class Timer : MonoBehaviour
         {
             countdownText.gameObject.SetActive(true);
             countdownText.text = "0";
+            yield return new WaitForSeconds(1f); // 1 saniye 0 yazısını göster
+            countdownText.gameObject.SetActive(false); // Sonra gizle
         }
 
         // Süre bitti, sahneyi yeniden başlat
-       // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-       levelManager.ShowPanel();
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        levelManager.ShowPanel();
     }
 }
