@@ -296,22 +296,22 @@ MonoBehaviour:
   - image: {fileID: 21300000, guid: f8048ad2f2c4379499dbca483f1c8ff1, type: 3}
     lines:
     - text: "Axus, \xF6mr\xFC boyunca iyilikle an\u0131lan bir macerac\u0131yd\u0131."
-      audioClip: {fileID: 8300000, guid: f52444c4965ad2a4c9aa8326728e331b, type: 3}
+      audioClip: {fileID: 8300000, guid: 0dc232cdb68b3c54180067a4268ea92c, type: 3}
   - image: {fileID: 21300000, guid: 6d48272a08e6fd94292d43b6de759552, type: 3}
     lines:
     - text: "Nesli t\xFCkenmekte olan Axolotl'lar ka\xE7\u0131r\u0131ld\u0131\u011F\u0131nda"
-      audioClip: {fileID: 8300000, guid: f52444c4965ad2a4c9aa8326728e331b, type: 3}
+      audioClip: {fileID: 8300000, guid: 027ee3303c1a7eb4193969645b4fe94f, type: 3}
     - text: "Onlar\u0131 kurtarmaya hayat\u0131 \xFCzerine ant i\xE7ti."
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: ef6b30ef02aea4e4aa929f4690e980e5, type: 3}
   - image: {fileID: 21300000, guid: 43eff2c4fec535148861b3b1ed4f2a0b, type: 3}
     lines:
     - text: "K\xF6y\xFCn b\xFCy\xFCc\xFCs\xFCnden ald\u0131\u011F\u0131 bir yetene\u011Fi
         kullan\u0131p..."
-      audioClip: {fileID: 8300000, guid: f52444c4965ad2a4c9aa8326728e331b, type: 3}
+      audioClip: {fileID: 8300000, guid: ac8cbf659f4536e4095f54246a8bc26e, type: 3}
     - text: "Kendi \xF6mr\xFCn\xFC, yaratt\u0131\u011F\u0131 platformlara vermeye
         ba\u015Flad\u0131"
-      audioClip: {fileID: 0}
-  displayTime: 3
+      audioClip: {fileID: 8300000, guid: 609f48f35870e974ca82acfcc8cbdd5c, type: 3}
+  displayTime: 4
   skipKey: 32
 --- !u!4 &472408475
 Transform:
