@@ -509,31 +509,8 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6437238833615899471, guid: ee39aef5455d5b4418c55be5c7b575ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 478661}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2784104205733645157, guid: ee39aef5455d5b4418c55be5c7b575ce, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 776016655}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee39aef5455d5b4418c55be5c7b575ce, type: 3}
---- !u!1 &776016654 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2784104205733645157, guid: ee39aef5455d5b4418c55be5c7b575ce, type: 3}
-  m_PrefabInstance: {fileID: 776016653}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &776016655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 776016654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6b463c26f0212a488a0faa0d7f3d088, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isCarryingAxolotl: 0
-  efektPozisyonu: {fileID: 478661}
-  kalpEfektiPrefab: {fileID: 4845025538891715829, guid: 571a68b108c54a54c9e0c5f3999f11ac, type: 3}
 --- !u!4 &776016663 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6437238833615899471, guid: ee39aef5455d5b4418c55be5c7b575ce, type: 3}
