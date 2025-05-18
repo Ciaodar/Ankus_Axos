@@ -293,25 +293,24 @@ MonoBehaviour:
   text: {fileID: 894756683}
   audioSource: {fileID: 472408476}
   cutsceneItems:
-  - image: {fileID: 21300000, guid: f8048ad2f2c4379499dbca483f1c8ff1, type: 3}
+  - image: {fileID: 21300000, guid: 44e6278f92bc647439eb47c5eff533a6, type: 3}
     lines:
-    - text: "Axus, \xF6mr\xFC boyunca iyilikle an\u0131lan bir macerac\u0131yd\u0131."
-      audioClip: {fileID: 8300000, guid: f52444c4965ad2a4c9aa8326728e331b, type: 3}
-  - image: {fileID: 21300000, guid: 6d48272a08e6fd94292d43b6de759552, type: 3}
+    - text: "Axus, \xF6mr\xFCnden feda ederek Axolotlar\u0131 birer birer \xF6zg\xFCr
+        k\u0131ld\u0131."
+      audioClip: {fileID: 8300000, guid: 9162555dfa370cd48b2afa07c73e6274, type: 3}
+    - text: "Her kurtulu\u015Fta \xF6mr\xFCnden bir par\xE7a eksildi."
+      audioClip: {fileID: 8300000, guid: de4e07f6953364a42bed4444b0296a2d, type: 3}
+    - text: "Axus son nefesini orman\u0131n derinliklerinde, son Axolotu kurtard\u0131\u011F\u0131nda
+        verdi."
+      audioClip: {fileID: 8300000, guid: 98e11fa31caf81b46bba4e32addcd1e1, type: 3}
+  - image: {fileID: 21300000, guid: a8b54cd686034e34c84fdb9c1a18455d, type: 3}
     lines:
-    - text: "Nesli t\xFCkenmekte olan Axolotl'lar ka\xE7\u0131r\u0131ld\u0131\u011F\u0131nda"
-      audioClip: {fileID: 8300000, guid: f52444c4965ad2a4c9aa8326728e331b, type: 3}
-    - text: "Onlar\u0131 kurtarmaya hayat\u0131 \xFCzerine ant i\xE7ti."
-      audioClip: {fileID: 0}
-  - image: {fileID: 21300000, guid: 43eff2c4fec535148861b3b1ed4f2a0b, type: 3}
-    lines:
-    - text: "K\xF6y\xFCn b\xFCy\xFCc\xFCs\xFCnden ald\u0131\u011F\u0131 bir yetene\u011Fi
-        kullan\u0131p..."
-      audioClip: {fileID: 8300000, guid: f52444c4965ad2a4c9aa8326728e331b, type: 3}
-    - text: "Kendi \xF6mr\xFCn\xFC, yaratt\u0131\u011F\u0131 platformlara vermeye
-        ba\u015Flad\u0131"
-      audioClip: {fileID: 0}
-  displayTime: 3
+    - text: "Onun ard\u0131ndan Axolotlar, minnettarl\u0131kla y\xFCce heykeller
+        in\u015Fa etti;"
+      audioClip: {fileID: 8300000, guid: 534356b48f8baa04d81c145a4711bc70, type: 3}
+    - text: "ta\u015Ftan yollarla g\xF6\u011Fe y\xFCkselen bir an\u0131t gibi."
+      audioClip: {fileID: 8300000, guid: 1cd3b1b4f1c6a2143b2970121a435e5a, type: 3}
+  displayTime: 7
   skipKey: 32
 --- !u!4 &472408475
 Transform:
@@ -483,7 +482,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f8048ad2f2c4379499dbca483f1c8ff1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 44e6278f92bc647439eb47c5eff533a6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
