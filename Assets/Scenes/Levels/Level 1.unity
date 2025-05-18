@@ -254,7 +254,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Art\u0131k Axolotllar\u0131 kurtarmaya haz\u0131rs\u0131n !"
+  m_text: "Art\u0131k Axolotllar\u0131 kurtarmaya haz\u0131rs\u0131n !\n\n(R - B\xF6l\xFCm\xFC
+    ba\u015Fa al)\n(Z - Sonraki b\xF6l\xFCme ge\xE7)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24cbeb4de4c2c26468aa7bf10bdc38ff, type: 2}
   m_sharedMaterial: {fileID: -8854924546638268878, guid: 24cbeb4de4c2c26468aa7bf10bdc38ff, type: 2}
