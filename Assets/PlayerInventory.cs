@@ -7,6 +7,7 @@ public class PlayerInventory : MonoBehaviour
     public bool isCarryingAxolotl = false;
     public Transform efektPozisyonu;
     public GameObject kalpEfektiPrefab;
+    public AxolotlManager axolotlManager;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -19,6 +20,7 @@ public class PlayerInventory : MonoBehaviour
         if (other.CompareTag("Lake") && isCarryingAxolotl)
         {
             isCarryingAxolotl = false;
+            axolotlManager.RescueAxolotl();
 
             // Kalp efekti instantiate edilir
             Instantiate(kalpEfektiPrefab, efektPozisyonu.position, Quaternion.identity);

@@ -3129,6 +3129,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf8db652939077447b449ad453ab8e48, type: 3}
+--- !u!114 &2092237467662616113 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 583092490543699266, guid: cf8db652939077447b449ad453ab8e48, type: 3}
+  m_PrefabInstance: {fileID: 1521813581300306803}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9ba3b9000c7a140b5abbf3e6b3e976, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4198928239560899257 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3412329522339981770, guid: cf8db652939077447b449ad453ab8e48, type: 3}
@@ -3490,6 +3501,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5996626755914097347, guid: ee39aef5455d5b4418c55be5c7b575ce, type: 3}
+      propertyPath: axolotlManager
+      value: 
+      objectReference: {fileID: 2092237467662616113}
     - target: {fileID: 6437238833615899471, guid: ee39aef5455d5b4418c55be5c7b575ce, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

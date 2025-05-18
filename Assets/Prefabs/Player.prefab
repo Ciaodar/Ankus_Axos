@@ -306,6 +306,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCarryingAxolotl: 0
+  efektPozisyonu: {fileID: 6437238833615899471}
+  kalpEfektiPrefab: {fileID: 4845025538891715829, guid: 571a68b108c54a54c9e0c5f3999f11ac, type: 3}
 --- !u!1 &3056796499210390926
 GameObject:
   m_ObjectHideFlags: 0

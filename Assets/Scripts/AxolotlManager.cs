@@ -5,8 +5,7 @@ public class AxolotlManager : MonoBehaviour
 {
     public int totalAxolotlsInLevel;
     public int rescuedAxolotls = 0;
-    public int hedefSayi = 0; // Inspector'dan ayarla
-
+    
     private LevelManager levelManager;
 
     void Start()
@@ -23,7 +22,7 @@ public class AxolotlManager : MonoBehaviour
     // Lake ile etkileşimde çağırılacak fonksiyon
     public void TryCompleteLevelWithLake()
     {
-        if (rescuedAxolotls >= hedefSayi)
+        if (rescuedAxolotls >= totalAxolotlsInLevel)
         {
             if (Timer.Instance != null)
                 Timer.Instance.StopTimerAndFreeze();
