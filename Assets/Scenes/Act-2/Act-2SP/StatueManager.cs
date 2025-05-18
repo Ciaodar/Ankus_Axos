@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class StatueManager : MonoBehaviour
 {
-    public static int axolotlCount = 0; // Static variable to keep track of the number of axolotls saved.
+    public static int axolotlCount = 7; // Static variable to keep track of the number of axolotls saved.
     public GameObject[] statues; // Array of statue GameObjects.
 
     public void Start()

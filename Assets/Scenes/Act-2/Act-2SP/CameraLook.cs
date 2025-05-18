@@ -8,6 +8,7 @@ public class CameraLook : MonoBehaviour
     
     
     public Transform player; // Reference to the player's transform
+    public Transform statue; // Reference to the statue's transform
     public float smoothSpeed = 0.125f; // Speed of the camera's movement
     public Vector3 offset; // Offset from the player's position
     
@@ -18,8 +19,13 @@ public class CameraLook : MonoBehaviour
     }
     void LateUpdate()
     {
-        // Calculate the desired position of the camera
-        Vector3 desiredPosition = player.position + offset;
+        Vector3 desiredPosition;
+        if (player == null)
+        {
+            desiredPosition = statue.position + offset;
+        }
+        else
+            desiredPosition = player.position + offset;
         
         // Smoothly interpolate between the current position and the desired position
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
