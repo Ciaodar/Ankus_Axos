@@ -3522,6 +3522,7 @@ MonoBehaviour:
   myButton: {fileID: 7687719872400006060}
   maxCount: 1
   prefabToPlace: {fileID: 4024508235165348411, guid: bc6a91519cd41db42ad94efce5c82a3f, type: 3}
+  placeSound: {fileID: 0}
 --- !u!1001 &3151810568667743289
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3687,6 +3688,7 @@ MonoBehaviour:
   myButton: {fileID: 7563742679248259359}
   maxCount: 1
   prefabToPlace: {fileID: 4996841014009152611, guid: 1dc2903edee4ca64db943fe87524ae3c, type: 3}
+  placeSound: {fileID: 8300000, guid: f8f5a976ec4c12741ab69108ba60d408, type: 3}
 --- !u!114 &7563742679248259359 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4848886853346954534, guid: 251590c26dd8dcd47beb67e6a2bba43a, type: 3}
@@ -3932,6 +3934,7 @@ MonoBehaviour:
   myButton: {fileID: 3818344500358478071}
   maxCount: 1
   prefabToPlace: {fileID: 6274853731491981980, guid: 72bfd1f39ad1e4f409ea3734353b0507, type: 3}
+  placeSound: {fileID: 0}
 --- !u!114 &3818344500358478071 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4848886853346954534, guid: 251590c26dd8dcd47beb67e6a2bba43a, type: 3}

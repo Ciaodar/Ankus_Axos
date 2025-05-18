@@ -640,6 +640,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2797824084828248751, guid: 03b8051177a12c44fb416af8476cdb52, type: 3}
+      propertyPath: placeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f8f5a976ec4c12741ab69108ba60d408, type: 3}
     - target: {fileID: 3670264984361228099, guid: 03b8051177a12c44fb416af8476cdb52, type: 3}
       propertyPath: target
       value: 
@@ -804,6 +808,10 @@ PrefabInstance:
       propertyPath: maxCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6861902909695012417, guid: 03b8051177a12c44fb416af8476cdb52, type: 3}
+      propertyPath: placeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f8f5a976ec4c12741ab69108ba60d408, type: 3}
     - target: {fileID: 7632342686420671515, guid: 03b8051177a12c44fb416af8476cdb52, type: 3}
       propertyPath: counter
       value: 1
