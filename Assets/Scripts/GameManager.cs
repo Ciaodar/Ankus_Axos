@@ -39,7 +39,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        //StatueManager.axolotlCount = totalRescuedAxolotls;
+        if (playerController != null)
+            playerController.enabled = false; // SADECE script'i disable et, objeyi kapatma!
     }
     
     public void ResetAllLevelData()
@@ -114,10 +115,7 @@ public class GameManager : MonoBehaviour
         isGameStarted = true;
 
         if (playerController != null)
-        {
-            playerController.enabled = true;
-            playerController.gameObject.SetActive(true);
-        }
+            playerController.enabled = true; // Sadece script'i aç
 
         foreach (var btn in placeObjectButtons)
         {

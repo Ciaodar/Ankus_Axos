@@ -1723,7 +1723,6 @@ RectTransform:
   - {fileID: 6320563251757310161}
   - {fileID: 7926149220116458782}
   - {fileID: 8164626187103239423}
-  - {fileID: 5931699205578074637}
   m_Father: {fileID: 2202122014354878556}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1950,11 +1949,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5826816081765192995}
+  m_Father: {fileID: 8164626187103239423}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -78.07406, y: -57.129005}
+  m_AnchoredPosition: {x: -0.000022888, y: -0.0000076294}
   m_SizeDelta: {x: 27.8992, y: 23.2548}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6025366243000543622
@@ -2036,7 +2035,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 82}
+  m_AnchoredPosition: {x: 0, y: 154}
   m_SizeDelta: {x: -1416.9944, y: -409.35413}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5066610596499389036
@@ -2577,7 +2576,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5931699205578074637}
   m_Father: {fileID: 5826816081765192995}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3714,7 +3714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2784104205733645157, guid: ee39aef5455d5b4418c55be5c7b575ce, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5996626755914097347, guid: ee39aef5455d5b4418c55be5c7b575ce, type: 3}
       propertyPath: axolotlManager

@@ -231,8 +231,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 36, y: 0}
-  m_SizeDelta: {x: 906.9353, y: 50}
+  m_AnchoredPosition: {x: 49, y: 0}
+  m_SizeDelta: {x: 981.9316, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &164218726
 MonoBehaviour:
@@ -255,7 +255,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Art\u0131k Axolotllar\u0131 kurtarmaya haz\u0131rs\u0131n !\n\n(R - B\xF6l\xFCm\xFC
-    ba\u015Fa al)\n(Z - Sonraki b\xF6l\xFCme ge\xE7)"
+    ba\u015Fa al)\n(Scroll - Kamera yak\u0131nla\u015Ft\u0131r/uzakla\u015Ft\u0131r)\n(Z
+    - Sonraki b\xF6l\xFCme ge\xE7)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24cbeb4de4c2c26468aa7bf10bdc38ff, type: 2}
   m_sharedMaterial: {fileID: -8854924546638268878, guid: 24cbeb4de4c2c26468aa7bf10bdc38ff, type: 2}
@@ -863,6 +864,10 @@ PrefabInstance:
       propertyPath: counter
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4117545432739446387, guid: 03b8051177a12c44fb416af8476cdb52, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5121730671324748763, guid: 03b8051177a12c44fb416af8476cdb52, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -991,6 +996,14 @@ PrefabInstance:
       propertyPath: placeSound
       value: 
       objectReference: {fileID: 8300000, guid: f8f5a976ec4c12741ab69108ba60d408, type: 3}
+    - target: {fileID: 7221430324825434866, guid: 03b8051177a12c44fb416af8476cdb52, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221430324825434866, guid: 03b8051177a12c44fb416af8476cdb52, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7632342686420671515, guid: 03b8051177a12c44fb416af8476cdb52, type: 3}
       propertyPath: counter
       value: 1
@@ -17550,7 +17563,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1701229575
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18655,7 +18668,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 562658170}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: deaf56acf718c4e4f92c7ff3534f9b7f, type: 3}
   m_Name: 

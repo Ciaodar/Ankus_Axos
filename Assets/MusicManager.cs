@@ -42,7 +42,7 @@ public class MusicManager : MonoBehaviour
             case "MainMenu":
                 clipToPlay = mainMenuMusic;
                 break;
-            case "Intro(A)":
+            case "IntroB":
                 clipToPlay = introMusic;
                 break;
             case "Level 1":
@@ -51,13 +51,13 @@ public class MusicManager : MonoBehaviour
             case "Level 4 2":
                 clipToPlay = gameplayMusic;
                 break;
-            case "CutScene(B)":
+            case "IntroA":
                 clipToPlay = cutSceneMusic;
                 break;
             case "EdenLevels":
                 clipToPlay = secondActMusic;
                 break;
-            case "Credits":
+            case "CreditsX":
                 clipToPlay = creditMusic;
                 break;
             default:

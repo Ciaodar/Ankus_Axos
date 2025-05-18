@@ -928,6 +928,10 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 16.505928
       objectReference: {fileID: 0}
+    - target: {fileID: 9016920446732326077, guid: 03b8051177a12c44fb416af8476cdb52, type: 3}
+      propertyPath: nextSceneName
+      value: IntroA
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -91,6 +91,6 @@ public class CutSceneController : MonoBehaviour
 
     private void LoadNextScene()
     {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex == 1 ? 2 : 0);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
