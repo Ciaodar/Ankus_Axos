@@ -38,6 +38,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        //StatueManager.axolotlCount = totalRescuedAxolotls;
     }
     
     public void ResetAllLevelData()
