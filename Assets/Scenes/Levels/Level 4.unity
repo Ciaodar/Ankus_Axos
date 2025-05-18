@@ -122,6 +122,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &478660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 478661}
+  m_Layer: 6
+  m_Name: EfektPozisyonu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &478661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478660}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.47, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 776016663}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &110453069
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,6 +455,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5996626755914097347, guid: ee39aef5455d5b4418c55be5c7b575ce, type: 3}
+      propertyPath: efektPozisyonu
+      value: 
+      objectReference: {fileID: 478661}
+    - target: {fileID: 5996626755914097347, guid: ee39aef5455d5b4418c55be5c7b575ce, type: 3}
+      propertyPath: kalpEfektiPrefab
+      value: 
+      objectReference: {fileID: 4845025538891715829, guid: 571a68b108c54a54c9e0c5f3999f11ac, type: 3}
     - target: {fileID: 6437238833615899471, guid: ee39aef5455d5b4418c55be5c7b575ce, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.6
@@ -466,7 +505,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6437238833615899471, guid: ee39aef5455d5b4418c55be5c7b575ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 478661}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2784104205733645157, guid: ee39aef5455d5b4418c55be5c7b575ce, type: 3}
       insertIndex: -1
@@ -490,6 +532,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCarryingAxolotl: 0
+  efektPozisyonu: {fileID: 478661}
+  kalpEfektiPrefab: {fileID: 4845025538891715829, guid: 571a68b108c54a54c9e0c5f3999f11ac, type: 3}
+--- !u!4 &776016663 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6437238833615899471, guid: ee39aef5455d5b4418c55be5c7b575ce, type: 3}
+  m_PrefabInstance: {fileID: 776016653}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1145056231
 GameObject:
   m_ObjectHideFlags: 0
@@ -36473,63 +36522,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2221c2cb7bccf34a9778d6cf6a7ec5b, type: 3}
---- !u!1001 &7750296227456715861
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2480755833050080117, guid: 571a68b108c54a54c9e0c5f3999f11ac, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 2480755833050080117, guid: 571a68b108c54a54c9e0c5f3999f11ac, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.3604987
-      objectReference: {fileID: 0}
-    - target: {fileID: 2480755833050080117, guid: 571a68b108c54a54c9e0c5f3999f11ac, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.1499325
-      objectReference: {fileID: 0}
-    - target: {fileID: 2480755833050080117, guid: 571a68b108c54a54c9e0c5f3999f11ac, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2480755833050080117, guid: 571a68b108c54a54c9e0c5f3999f11ac, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2480755833050080117, guid: 571a68b108c54a54c9e0c5f3999f11ac, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2480755833050080117, guid: 571a68b108c54a54c9e0c5f3999f11ac, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2480755833050080117, guid: 571a68b108c54a54c9e0c5f3999f11ac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 2480755833050080117, guid: 571a68b108c54a54c9e0c5f3999f11ac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2480755833050080117, guid: 571a68b108c54a54c9e0c5f3999f11ac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4845025538891715829, guid: 571a68b108c54a54c9e0c5f3999f11ac, type: 3}
-      propertyPath: m_Name
-      value: Kalp
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 571a68b108c54a54c9e0c5f3999f11ac, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -36541,5 +36533,4 @@ SceneRoots:
   - {fileID: 1591997673}
   - {fileID: 1445911626}
   - {fileID: 110453071}
-  - {fileID: 7750296227456715861}
   - {fileID: 1774248636}
