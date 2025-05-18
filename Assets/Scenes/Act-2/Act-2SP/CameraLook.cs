@@ -14,6 +14,7 @@ public class CameraLook : MonoBehaviour
     
     void Start()
     {
+        if (player==null)return;
         // Initialize the camera's position
         transform.position = player.position + offset;
     }

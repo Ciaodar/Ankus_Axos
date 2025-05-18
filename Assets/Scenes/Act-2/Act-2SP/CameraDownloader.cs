@@ -4,19 +4,20 @@ using System.Collections.Generic;
 using Cainos.LucidEditor;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraDownloader : MonoBehaviour
 {
     private CameraLook cam;
     public float speed = 5f; // Speed of the camera movement
     public Transform down; // low point
-
-    [TitleHeader("Text Fade In Settings")]
-    public TextMeshProUGUI text;
-    public float fadeDuration = 2f; // Duration of the fade-in effect
+    public float waitDuration = 2f;
+    public int nextScene;
+     // Duration of the fade-in effect
 
     private void Start()
     {
+        
         cam = FindObjectOfType<CameraLook>();
     }
 
@@ -25,26 +26,24 @@ public class CameraDownloader : MonoBehaviour
         if(cam.offset.y<down.position.y) {
             cam.offset.y=down.position.y; // Prevents the camera from moving downwards if it is already at the bottom
             enabled = false; // Disable this script
-            StartCoroutine(FadeInText(text, fadeDuration)); // Start the fade-in coroutine
+            StartCoroutine(FadeInNextScene()); // Start the fade-in coroutine
             return;
         }
         cam.offset.y -= speed * Time.deltaTime; // Move the camera downwards
     }
     
-    //this coroutine is used to make a TextMeshProUGUI object fade in.
-    private IEnumerator FadeInText(TextMeshProUGUI text, float duration)
+    //this coroutine is used to fade out and fade into the next scene after duration
+    private IEnumerator FadeInNextScene()
     {
-        Color color = text.color;
-        color.a = 0; // Start with transparent text
-        text.color = color;
-
+        // Fade in the next scene
         float elapsedTime = 0f;
-        while (elapsedTime < duration)
+        while (elapsedTime < waitDuration)
         {
             elapsedTime += Time.deltaTime;
-            color.a = Mathf.Clamp01(elapsedTime / duration); // Fade in the text
-            text.color = color;
             yield return null;
         }
+
+        // Load the next scene
+        SceneManager.LoadScene(nextScene);
     }
 }
