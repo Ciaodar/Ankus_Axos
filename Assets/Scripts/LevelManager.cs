@@ -8,6 +8,7 @@ public class LevelManager : MonoBehaviour
     public GameObject uiPanel;
     public TextMeshProUGUI axolotlText;
     public TextMeshProUGUI timerText;
+    public TextMeshProUGUI totalAxolotlText; // Inspector'a atamayı unutma
     public Button restartButton;
     public Button nextLevelButton;
     public GameObject player;
@@ -38,6 +39,7 @@ public class LevelManager : MonoBehaviour
 
         if (GameManager.Instance != null && Timer.Instance != null)
         {
+            totalAxolotlText.text = $"Toplam Kurtarılan: {GameManager.Instance.totalRescuedAxolotls}";
             timerText.text = $"Kalan Süre: {Mathf.CeilToInt(Timer.Instance.totalTime)}";
         }
         else

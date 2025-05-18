@@ -5,6 +5,7 @@ public class AxolotlManager : MonoBehaviour
 {
     public int totalAxolotlsInLevel;
     public int rescuedAxolotls = 0;
+    private bool levelCompleted = false;
     
     private LevelManager levelManager;
 
@@ -17,15 +18,34 @@ public class AxolotlManager : MonoBehaviour
     public void RescueAxolotl()
     {
         rescuedAxolotls++;
+    
+        // Her aksolot kurtarılışında toplam skor güncelleniyor
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.AddRescuedAxolotls(rescuedAxolotls);
+        }
     }
 
     // Lake ile etkileşimde çağırılacak fonksiyon
     public void TryCompleteLevelWithLake()
     {
-        if (rescuedAxolotls >= totalAxolotlsInLevel)
+        if (levelCompleted)
+            return;
+
+        bool isTimeUp = Timer.Instance != null && Timer.Instance.totalTime <= 0;  // Süre bitti mi kontrolü
+        bool allAxolotlsRescued = rescuedAxolotls >= totalAxolotlsInLevel;
+
+        if (isTimeUp || allAxolotlsRescued)
         {
+            levelCompleted = true;
+
             if (Timer.Instance != null)
                 Timer.Instance.StopTimerAndFreeze();
+
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.AddRescuedAxolotls(rescuedAxolotls);
+            }
 
             ShowResultPanel();
         }

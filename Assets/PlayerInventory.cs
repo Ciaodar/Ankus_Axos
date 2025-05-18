@@ -24,6 +24,10 @@ public class PlayerInventory : MonoBehaviour
 
             // Kalp efekti instantiate edilir
             Instantiate(kalpEfektiPrefab, efektPozisyonu.position, Quaternion.identity);
+
+            // Level tamamlanma kontrolü ve panel açma
+            axolotlManager.TryCompleteLevelWithLake();
         }
     }
+
 }
