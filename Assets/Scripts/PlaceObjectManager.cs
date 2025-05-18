@@ -14,11 +14,20 @@ public class PlaceObjectManager : MonoBehaviour
 
     private GameObject currentGhostObject;
 
+    [Header("Ses Ayarları")]
+    public AudioClip placeSound; // Inspector'dan ata
+    private AudioSource audioSource;
+
     void Start()
     {
         currentCount = maxCount;
         if (myButton != null)
             myButton.interactable = currentCount > 0;
+
+        // AudioSource ekle veya bul
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     public void OnButtonClick()
@@ -60,6 +69,11 @@ public class PlaceObjectManager : MonoBehaviour
     {
         SetGhostMode(currentGhostObject, false);
         ShowAssignTimePanel(currentGhostObject);
+
+        // SES ÇAL
+        if (placeSound != null && audioSource != null)
+            audioSource.PlayOneShot(placeSound);
+
         currentGhostObject = null;
     }
 
